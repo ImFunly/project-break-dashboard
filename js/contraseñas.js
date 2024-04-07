@@ -18,16 +18,16 @@ function getPassword() {
   let password = "";
 
   password += mayus.charAt(Math.floor(Math.random() * mayus.length));
-  // console.log(password);
+
   password += minus.charAt(Math.floor(Math.random() * minus.length));
-  // console.log(password);
+
   password += numbers.charAt(Math.floor(Math.random() * numbers.length));
-  // console.log(password);
+
   password += symbols.charAt(Math.floor(Math.random() * symbols.length));
-  // console.log(password);
+
 
   const allChars = mayus + minus + numbers + symbols;
-  console.log(password);
+
   for (let i = 0; i < inputNumber.value - 4; i++) {
     password += allChars.charAt(Math.floor(Math.random() * allChars.length));
   }
@@ -36,7 +36,7 @@ function getPassword() {
     .split("")
     .sort(() => Math.random() - 0.5)
     .join("");
-  // console.log(password);
+
   generatedPassword.textContent = password;
 }
 

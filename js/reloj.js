@@ -3,7 +3,6 @@ function showDate() {
   const options = { day: "2-digit", month: "2-digit", year: "numeric" };
   const formattedDate = date.toLocaleDateString(undefined, options);
   document.getElementById("dateDisplay").innerText = formattedDate;
-  document.getElementById("dateDisplay").textContent = formattedDate;
 }
 showDate();
 
@@ -16,7 +15,6 @@ function showTime() {
   let time = hour;
   let displayElement = document.getElementById("clockDisplay");
   document.getElementById("clockDisplay").innerText = time;
-  document.getElementById("clockDisplay").textContent = time;
 
   let message;
   if (hour >= 0 && hour < 7) {
