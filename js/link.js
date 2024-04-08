@@ -3,10 +3,16 @@ function putURL() {
   const inputURL = document.getElementById("inputURL").value;
   const insertURL = document.getElementById("insertURL");
 
-  const newParagraph = document.createElement("p");
+  const URLClick = document.createElement("a");
+  URLClick.href = inputURL;
+  URLClick.target = "_blank";
 
-  newParagraph.textContent = inputName + " " + inputURL;
-  insertURL.appendChild(newParagraph);
+  const newP = document.createElement("p");
+
+  URLClick.textContent = inputName + " ";
+  newP.appendChild(URLClick);
+
+  insertURL.appendChild(newP);
 }
 
 const insertButton = document.querySelector(".insertButton");
