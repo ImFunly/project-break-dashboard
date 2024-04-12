@@ -25,7 +25,6 @@ function getPassword() {
 
   password += symbols.charAt(Math.floor(Math.random() * symbols.length));
 
-
   const allChars = mayus + minus + numbers + symbols;
 
   for (let i = 0; i < inputNumber.value - 4; i++) {
@@ -42,3 +41,19 @@ function getPassword() {
 
 const generateButton = document.querySelector(".generate");
 generateButton.addEventListener("click", getPassword);
+
+let bg = ["bg/1.jpg", "bg/2.jpg", "bg/3.jpg", "bg/4.jpg"];
+
+function getRandomImage() {
+  let randomNumber = Math.floor(Math.random() * bg.length);
+  return bg[randomNumber];
+}
+
+function setBackgroundImage() {
+  let randomBG = getRandomImage();
+  document.body.style.backgroundImage = "url('" + randomBG + "')";
+}
+
+setBackgroundImage();
+
+setInterval(setBackgroundImage, 5000);
