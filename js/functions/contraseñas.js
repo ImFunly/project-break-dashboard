@@ -1,4 +1,4 @@
-function getPassword() {
+export function getPassword() {
   const inputNumber = document.getElementById("inputNumber");
   const errorMessage = document.getElementById("error-message");
   const generatedPassword = document.getElementById("generated");

@@ -3,10 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/stylesindex.css" />
+    <title>Dashboard</title>
   </head>
   <body>
-    <script src="./js/script.js"></script>
+    <section id="sectionContraseña">
+      <h2>Crea tu contraseña segura</h2>
+      <label>Número de carácteres de la contraseña</label>
+      <input id="inputNumber" type="number" min="12" max="50" value="12" />
+      <button class="generate" type="submit">Generar contraseña</button>
+      <div id="error-message"></div>
+      <div id="generated"></div>
+    </section>
+    <section id="sectionEnlace">
+      <h2>Añade tu enlace de interés</h2>
+      <input
+        id="inputName"
+        type="text"
+        placeholder="Nombre de tu enlace"
+        size="13"
+      />
+      <input
+        id="inputURL"
+        type="text"
+        placeholder="Pega aquí la URL"
+        size="30"
+      />
+      <button class="insertButton" type="submit">Añadir enlace</button>
+      <div id="insertName"></div>
+      <div id="insertURL"></div>
+    </section>
+    <section id="sectionFecha">
+      <div id="dateDisplay" class="date" onload="showDate()"></div>
+      <div id="clockDisplay" class="clock" onload="showTime()"></div>
+    </section>
+    <section id="sectionTiempo">
+      <div id="insertClime"></div>
+    </section>
+
+    <script type="module" src="js/dashboard.js"></script>
   </body>
 </html>

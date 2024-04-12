@@ -6,3 +6,51 @@ body {
   height: 100vh;
   color: white;
 }
+
+.container {
+  display: flex;
+  position: relative;
+}
+
+.forecastContainer {
+  position: absolute;
+  display: flex;
+  bottom: -60%;
+  width: 325px;
+  height: 90px;
+  overflow: auto;
+}
+
+.currentHours {
+  position: relative;
+  left: 16%;
+  top: -24%;
+}
+
+.grados {
+  position: relative;
+  left: -19%;
+  top: 54%;
+}
+
+#dateDisplay {
+  font-size: 40px;
+  position: relative;
+  left: 2%;
+}
+
+#clockDisplay {
+  font-size: 20px;
+}
+
+.generate {
+  color: white;
+  background-color: rgb(54, 154, 184);
+  cursor: pointer;
+}
+
+.insertButton {
+  color: white;
+  background-color: rgb(54, 154, 184);
+  cursor: pointer;
+}

@@ -3,7 +3,7 @@ const insertClime = document.getElementById("insertClime");
 const apiKey = "bc614f989cc648bab74201418241004";
 const city = "Almeria";
 let date = new Date();
-const getClime = async () => {
+export const getClime = async () => {
   try {
     const respuesta = await fetch(
       `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&aqi=no`
@@ -41,6 +41,7 @@ const getClime = async () => {
         const currentHours = document.createElement("div");
         const time = hour.time.match(/([0-1][0-9]|2[0-3]):([0-5][0-9])/)[0];
         currentHours.innerHTML = `<p>${time}</p>`;
+        currentHours.classList.add("currentHours");
         forecastContainer.appendChild(currentHours);
         const img = document.createElement("img");
         img.src = `https:${hour.condition.icon}`;
@@ -48,6 +49,7 @@ const getClime = async () => {
         const grados = document.createElement("div");
         grados.innerHTML = `<p>${hour.temp_c}°C</p>`;
         forecastContainer.appendChild(grados);
+        grados.classList.add("grados");
       });
     });
   } catch (error) {
